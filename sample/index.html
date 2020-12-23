@@ -8,7 +8,7 @@
 
 		<link rel="stylesheet" href="dist/reset.css">
 		<link rel="stylesheet" href="dist/reveal.css">
-		<link rel="stylesheet" href="dist/theme/black.css" id="theme">
+		<link rel="stylesheet" href="dist/theme/serif.css" id="theme">
 
 		<!-- Theme used for syntax highlighted code -->
 		<link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
@@ -20,6 +20,7 @@
 					<script type="text/template">
 						Математическая логика и теория алгоритмов
 						=========================================
+						Notes: Заголовок
 					</script>
 				</section>
 
@@ -31,7 +32,10 @@
 
 						Раздел математической логики, изучающий логические формы сложных высказываний, 
 						построенных из простых или элементарных высказываний с помощью логических операций, 
-						называется логикой высказываний  
+						называется **логикой высказываний**.
+
+						Notes: — это раздел символической логики, изучающий сложные высказывания, 
+						образованные из простых, и их взаимоотношения.
 					</script>
 				</section>
 
@@ -40,14 +44,14 @@
 						Логические операции в классической логике 
 						-------------------------
 
-						- Конъюнкция (логическое умножение) 
-						двух высказываний A и B — 
+						1. **Конъюнкция** (логическое умножение) 
+						двух высказываний $A\text{ и }B$ — 
 						это сложное логическое высказывание, 
 						которое истинно только в случае истинности 
 						всех составляющих высказываний, 
-						в противном случае оно ложно
+						в противном случае оно ложно.
 
-						Обозначение: $A$ & $B$ или $A \wedge B$
+						Обозначение: $A$ &$B$ или $A \wedge B$.
 
 						Notes: Читается как A и B
 						
@@ -59,14 +63,14 @@
 						Логические операции в классической логике 
 						-------------------------
 
-						- Дизъюнкция (логическое сложение) 
-						двух высказываний A и B — 
+						2. **Дизъюнкция** (логическое сложение) 
+						двух высказываний $A\text{ и }B$ — 
 						это сложное логическое высказывание, 
 						которое ложно только в случае ложности
 						всех составляющих высказываний, 
-						в противном случае оно истинно
+						в противном случае оно истинно.
 
-						Обозначение: $A \vee B$ или $A+B$
+						Обозначение: $A \vee B$ или $A+B$.
 						
 						Notes: Читается как A или B
 					</script>
@@ -77,12 +81,12 @@
 						Логические операции в классической логике 
 						-------------------------
 
-						- Инверсия (отрицание) 
-						высказывания A называется высказывание, 
-						которое истинно, если высказывание A ложно, 
-						и ложно, когда A истинно.
+						3. **Инверсия** (отрицание) 
+						высказывания $A$ называется высказывание, 
+						которое истинно, если высказывание $A$ ложно, 
+						и ложно, когда $A$ истинно.
 
-						Обозначение: $\lnot A$ или $\bar A$
+						Обозначение: $\lnot A$ или $\bar A$.
 						
 						Notes: логическая связка «не». Читается: «не A» («не верно, что A»). 
 						Выполняется над одним аргументом.
@@ -94,167 +98,159 @@
 						Логические операции в классической логике 
 						-------------------------
 
-						- Импликацией (логическим следованием) двух высказываний 
-						A и B называется высказывание, которое ложно тогда и только 
-						тогда, когда A истинно, а B ложно.
+						4. **Импликацией** (логическим следованием) двух высказываний 
+						$A\text{ и }B$ называется высказывание, которое ложно тогда и только 
+						тогда, когда $A$ истинно, а $B$ ложно.
 
-						Обозначение: $A \to B$ или $A \supset B$
+						Обозначение: $A \to B$ или $A \supset B$.
 						
 						Notes: Читается: «если A, то B» (« A влечет B», «из A следует B»). 
 					</script>
 				</section>
+
+				<section data-markdown data-markdown-separator="^Notes:">
+					<script type="text/template">
+						Логические операции в классической логике 
+						-------------------------
+
+						5. Логическая равнозначность или **эквиваленция** 
+						(или эквивалентность) - это логическое выражение, 
+						которое является истинным тогда, когда оба простых 
+						логических выражения имеют одинаковую истинность. 
+
+						Обозначение: $A \equiv B$ или $A \leftrightarrow B$.
+						
+						Notes: Читается: «A то же самое, что B» («A эквивалентно B», 
+						«A тогда и только тогда, когда B»). 
+					</script>
+				</section>
+
+				<section data-markdown data-markdown-separator="^Notes:">
+					<script type="text/template">
+						Логические операции в классической логике 
+						-------------------------
+
+						6. **Исключающим «или»** (разделительной 
+						дизъюнкцией или сложением по модулю 2) \
+						двух высказываний $A\text{ и }B$ называется 
+						высказывание, истинное, когда истинность значений 
+						$A\text{ и }B$ не совпадает, и ложное $-$ \
+						в противном случае.
+
+						Обозначение: $A \oplus  B$.
+						
+						Notes: Читается: «либо A, либо B» («один или другой, но не оба вместе»). 
+					</script>
+				</section>
+
+				<section data-markdown data-markdown-separator="^Notes:">
+					<script type="text/template">
+						Логические операции в классической логике 
+						-------------------------
+
+						7. **Условная дизъюнкция** $-$ это тернарная 
+						логическая связка для заданных операндов 
+						$A, B$ и $C$. Определяется значением $A$, \
+						когда $B$ истинно, и значением $C$ в противном случае.
+
+						Обозначение:$[A, B, C]$.
+						
+						Notes: Читается: «если B, то A, иначе C» («A или C, в зависимости от B или не B», 
+						«B подразумевает A, а не B подразумевает C»). 
+					</script>
+				</section>
+
+				<section data-markdown data-markdown-separator="^Notes:">
+					<script type="text/template">
+						Логические операции в классической логике 
+						-------------------------
+
+						8. **Стрелка Пирса**$-$ бинарная логическая операция. 
+						Это высказывание истинно только тогда, когда ложны
+						оба высказывания, входящие в это сложное высказывание.
+
+						Обозначение: $A \downarrow B$.
+						
+						Notes: Читается: «ни A, ни B». 
+					</script>
+				</section>
+
+				<section data-markdown data-markdown-separator="^Notes:">
+					<script type="text/template">
+						Логические операции в классической логике 
+						-------------------------
+
+						9. **Штрих Шеффера** — бинарная логическая операция. Высказывание 
+						со штрихом Шеффера истинно тогда и только тогда, когда либо $A$ 
+						ложно, либо $B$ ложно, либо $A\text{ и }B$ ложны одновременно. 
+						Оно ложно и в том случае, если истинны и $A$ и $B$ одновременно.
+
+						Обозначение: $A \mid B$.
+						
+						Notes: Читается: «А и В несовместны» («Неверно, что А и В»). 
+					</script>
+				</section>
 				
 				<section id=integral-table>
-					<h2>Таблица интегралов</h2>
+					<h2>Таблицы истинности</h2>
+				</section>
+
+				<section>
+					<h2>Таблицы истинности</h2>
+					<table id="findCats">
+						<tbody>
+							<tr>
+								<td>1</td>
+								<td>2</td>
+								<td>3</td>
+								<td>4</td>
+							</tr>
+							<tr>
+								<td>1</td>
+								<td>2</td>
+								<td>3</td>
+								<td>4</td>
+							</tr>
+							<tr>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+							</tr>
+						</tbody>
+					</table>
 				</section>
 
 				<section data-markdown data-markdown-separator="^Notes:">
 					<script type="text/template">
-						Определенный интеграл
+						Алгоритмы сортировок
 						----------------------
-						1. Разобъем промежуток точками 
-						$x_0 = a; x_1, x_2, x_3, \cdots, x_k, x_{k+1}, \cdots, x_n = b$
-						Введем следующее обозначение: $\Delta x_k = x_{k+1}-x_k$ - 
-						длина участка разбиения.
-						$\lambda = \sup {\Delta x_k}$ - диаметр разбиения (наибольший 
-						из всех длин участков разбиения)
-						
-					</script>
-				</section>
-
-				<section data-markdown data-markdown-separator="^Notes:">
-					<script type="text/template">
-						Определенный интеграл
-						----------------------
-						2. На каждом частичном участке $\[x_k; x_{k+1}\]$
-						возьмем произвольную точку $\xi_k$ и вычислим в ней значение 
-						$f(\xi_k)$
-						3. Составим произведение $f(\xi_k) \cdot \Delta x_k$
-						4. Составим сумму $$\sigma_n = \sum_{k=0}^{n-1} f(\xi_k) \cdot \Delta x_k$$
-					</script>
-				</section>
-
-				<section data-markdown data-markdown-separator="^Notes:">
-					<script type="text/template">
-						Определенный интеграл
-						----------------------
-						5. Измельчая дробление  (за счет увеличения числв точек
-						дробления $n$) и устремляя при этом диаметр разбиения к 
-						нулю ($lambda \rightarrow 0$), найдем предел последовательности 
-						интегральных сумм $$
-						J = \lim_{n \rightarrow \infty, \lambda \rightarrow 0} \sigma_n
-						$$
-					</script>
-				</section>
-
-				<section data-markdown data-markdown-separator="^Notes:">
-					<script type="text/template">
-						Определенный интеграл
-						----------------------
-						Если предел $J$ существует, не зависит от способа 
-						дробления и выбора точек $\xi_k$, то он называется 
-						определенным интегралом функции $f(x)$ по промежутку $\[a,b\]$
-						и обрзначается $$
-						J = \int_a^b f(x)dx,
-						$$ где $a$ и $b$ называются верхним и нижним пределом интегрирования. 
-					</script>
-				</section>
-				
-				<section data-markdown data-markdown-separator="^Notes:">
-					<script type="text/template">
-						Определенный интеграл
-						----------------------
-						Более компактное определение определенного интеграла 
-						записывается, как 
-						$$
-							J = \lim_{n \rightarrow \infty, \lambda \rightarrow 0}
-							\sum_{k=0}^{n-1} f(\xi_k) \cdot \Delta x_k
-						$$
-					</script>
-				</section>
-
-				<section data-markdown data-markdown-separator="^Notes:">
-					<script type="text/template">
-						Свойства определенных интегралов
-						----------------------
-						- $$
-							\int_a^b Af(x)dx = A\int_a^b f(x)dx
-						$$
-						- $$
-						\int_a^b (f_1(x)+f_2(x))dx = 
-						$$
-						$$
-						= \int_a^b f_1(x)dx + \int_a^b f_2(x)dx
-						$$
-
-					</script>
-				</section>
-				
-				<section data-markdown data-markdown-separator="^Notes:">
-					<script type="text/template">
-						Свойства определенных интегралов
-						----------------------
-						- $$
-						\int_a^b f(x)dx = \int_a^c f(x)dx + \int_c^b f(x)dx,
-						$$
-						для любых чисел $a < c < b$
-					</script>
-				</section>
-
-				<section data-markdown data-markdown-separator="^Notes:">
-					<script type="text/template">
-						Формула Ньютона-Лейбница
-						----------------------
-					</script>
-				</section>
-
-				<section data-markdown data-markdown-separator="^Notes:">
-					<script type="text/template">
-						Способы вычисления интегралов
-						-----------------------------
+						1. Сортировка пузырьком
+						2. Сортировка перемешиванием
+						3. Сортировка вставками
+						4. Сортировка слиянием
+						5. Сортировка выбором
+						6. Пирамидальная сортировка
+						7. Плавная сортировка
+						8. Быстрая сортировка
 					</script>
 				</section>
 
 				<section>
-					<h2>Нахождение интеграла</h2>
+					<h2>Сортировка массивов</h2>
+					<h3>Сортировка пузырьком</h3>
+					<label for="sortInput1">Ваш массив:</label>
+					<input type="text" id="sortInput1">
+					<button id="startSort1">Сортировать</button><br>
+					<output id="sortOutput1"></output>
 				</section>
 
-				<section data-markdown data-markdown-separator="^Notes:">
-					<script type="text/template">
-						Интерполирование функции
-						-----------------------------
-					</script>
-				</section>
-
-				<section data-markdown data-markdown-separator="^Notes:">
-					<script type="text/template">
-						Интерполяционный многочлен Лагранжа
-						-----------------------------
-					</script>
-				</section>
-				
-				<section data-markdown data-markdown-separator="^Notes:">
-					<script type="text/template">
-						Геометрический смысл определенного интеграла
-						-----------------------------
-					</script>
-				</section>
-
-				<section>
-					<h2>Нахождение площади криволинейной трапеции</h2>
-				</section>
-
-				<section>
-					<h2>Игра 1. Угадай площадь</h2>
-				</section>
-
-				<section>
-					<h2>Игра 2. Найди котиков</h2>
-				</section>
-
-				<section>
-					<h2>Игра 3. Найди интегралы</h2>
-				</section>
 
 
 			</div>
@@ -264,6 +260,33 @@
 		<script src="plugin/notes/notes.js"></script>
 		<script src="plugin/markdown/markdown.js"></script>
 		<script src="plugin/highlight/highlight.js"></script>
+
+		<script>
+			window.onload = () => {
+				document.querySelector('#startSort1').onclick = () => {
+					let arrayIn = document.querySelector('#sortInput1').value;
+					
+					if (array === '') { return document.querySelector('#sortOutput1').innerHTML = 'Вы ничего не ввели'; }
+					
+					function bubbleSort(arr) {
+  						for (let j = arr.length - 1; j > 0; j--) {
+    						for (let i = 0; i < j; i++) {
+      							if (arr[i] > arr[i + 1]) {
+        							let temp = arr[i];
+        							arr[i] = arr[i + 1];
+        							arr[i + 1] = temp;
+      							}
+    						}
+  						}
+					}
+					let result = bubbleSort(array);
+					return document.querySelector('#sortOutput1').innerHTML = result;
+				}
+			}
+		
+
+		</script>
+
 		<script>
 			// More info about initialization & config:
 			// - https://revealjs.com/initialization/
