@@ -191,41 +191,76 @@
 					</script>
 				</section>
 				
-				<section id=integral-table>
-					<h2>Таблицы истинности</h2>
+				<section data-markdown data-markdown-separator="^Notes:">
+					<script type="text/template">
+						Определение таблицы истинности 
+						-------------------------
+
+						**Таблица истинности** — это таблица, в которой отражены все значения логической 
+						функции при всех возможных значениях, входящих в неё логически.
+						
+						Notes: Под «логической функцией» в данном случае понимается функция, 
+						у которой значения переменных (параметров функции) и значение самой функции 
+						выражают логическую истинность. Например, в двузначной логике они могут 
+						принимать значения «истина» либо «ложь» (true либо false, 1 либо 0).
+					</script>
 				</section>
 
 				<section>
 					<h2>Таблицы истинности</h2>
-					<table id="findCats">
-						<tbody>
+					<select name="table" id="idTable">
+						<option value="01">Конъюнкция</option>
+						<option value="02">Дизъюнкция</option>
+						<!-- <option value="03">Инверсия</option> -->
+						<option value="04">Импликация</option>
+						<option value="05">Эквиваленция</option>
+						<option value="06">Исключающее или</option>
+						<!-- <option value="07">Условная дизъюнкция</option> -->
+						<option value="08">Стрелка Пирса</option>
+						<option value="09">Штрих Шеффера</option>
+					</select>
+						
+					<table>
+						<td>
+						<table>
+							<tr>
+								<td>0</td>
+								<td>0</td>
+							</tr>
+							<tr>
+								<td>0</td>
+								<td>1</td>
+							</tr>
 							<tr>
 								<td>1</td>
-								<td>2</td>
-								<td>3</td>
-								<td>4</td>
+								<td>0</td>
 							</tr>
 							<tr>
 								<td>1</td>
-								<td>2</td>
-								<td>3</td>
-								<td>4</td>
+								<td>1</td>
 							</tr>
-							<tr>
-								<td></td>
-								<td></td>
-								<td></td>
-								<td></td>
-							</tr>
-							<tr>
-								<td></td>
-								<td></td>
-								<td></td>
-								<td></td>
-							</tr>
-						</tbody>
+						</table>
+						</td>	
+						<td>
+							<table id="tableResult"></table>
+						</td>
 					</table>
+					<output id="outputTableResult"></output>
+
 				</section>
+
+				<section data-markdown data-markdown-separator="^Notes:">
+					<script type="text/template">
+						Определение алгоритма
+						-----------------------
+						**Алгоритм**  — конечная совокупность точно заданных правил решения некоторого класса 
+						задач или набор инструкций, описывающих порядок действий исполнителя для решения 
+						определённой задачи.
+					
+						Notes: (лат. algorithmi — от имени среднеазиатского математика Аль-Хорезми)
+					</script>
+				</section>
+
 
 				<section data-markdown data-markdown-separator="^Notes:">
 					<script type="text/template">
@@ -239,7 +274,87 @@
 						6. Пирамидальная сортировка
 						7. Плавная сортировка
 						8. Быстрая сортировка
+
+						Notes: Алгоритм сортировки — это алгоритм для упорядочивания элементов в списке.
 					</script>
+				</section>
+
+				<section data-markdown data-markdown-separator="^Notes:">
+					<h1>**Сортировка пузырьком**</h1>				
+						Алгоритм состоит из повторяющихся проходов по сортируемому массиву. 
+						За каждый проход элементы последовательно сравниваются и, 
+						если порядок в паре неверный, выполняется обмен элементов. 
+						При каждом проходе алгоритма по внутреннему циклу,
+						очередной наибольший элемент массива ставится на своё место в конце 
+						массива рядом с предыдущим «наибольшим элементом»,
+						а наименьший элемент перемещается на одну позицию к началу массива.
+						</script>
+				</section>
+
+				<section data-markdown data-markdown-separator="^Notes:">
+					<h1>**Сортировка перемешиванием**</h1>				
+					Сортировка перемешиванием, или Шейкерная сортировка, или двунаправленная 
+					(англ. Cocktail sort) — разновидность пузырьковой сортировки.
+					Границы рабочей части массива (то есть части массива, где происходит движение)
+					устанавливаются в месте последнего обмена на каждой итерации.
+					Массив просматривается поочередно справа налево и слева направо.
+						</script>
+				</section>
+
+				<section data-markdown data-markdown-separator="^Notes:">
+					<h1>**Сортировка вставками**</h1>				
+					Сортировка вставками (англ. Insertion sort) — алгоритм сортировки,
+					в котором элементы входной последовательности просматриваются по одному,
+					и каждый новый поступивший элемент размещается в подходящее место
+					среди ранее упорядоченных элементов
+						</script>
+				</section>
+
+				<section data-markdown data-markdown-separator="^Notes:">
+					<h1>**Сортировка выбором**</h1>				
+					Шаги алгоритма:
+					------
+						1. Находим номер минимального значения в текущем списке
+						2. Производим обмен этого значения со значением первой
+						неотсортированной позиции
+						3. Теперь сортируем хвост списка, исключив из рассмотрения
+						 уже отсортированные элементы
+						</script>
+				</section>
+
+				<section data-markdown data-markdown-separator="^Notes:">
+					<h1>**Пирамидальная сортировка**</h1>				
+					Сортировка пирамидой использует бинарное сортирующее дерево.
+					Сортирующее дерево — это такое дерево, у которого выполнены условия:
+					Каждый лист имеет глубину либо d, либо d-1, d — максимальная глубина дерева.
+					Значение в любой вершине не меньше (другой вариант — не больше) значения её потомков.
+						</script>
+				</section>
+
+				<section data-markdown data-markdown-separator="^Notes:">
+					<h1>**Плавная сортировка**</h1>				
+					Плавная сортировка (англ. Smoothsort) — алгоритм сортировки выбором,
+					разновидность пирамидальной сортировки. 
+					Как и пирамидальная сортировка, имеет сложность в худшем 
+					случае равную O(n log n). Преимущество плавной сортировки в том,
+					 что её сложность приближается к O(n), если входные данные частично 
+					 отсортированы, в то время как у пирамидальной сортировки сложность
+					  всегда одна, независимо от состояния входных данных.
+						</script>
+				</section>
+
+				
+				<section data-markdown data-markdown-separator="^Notes:">
+					<h1>**Быстрая сортировка**</h1>				
+					Метод основан на подходе "разделяй-и-властвуй". Общая схема такова:
+					из массива выбирается некоторый опорный элемент a[i],
+					запускается процедура разделения массива, которая перемещает все ключи,
+					 меньшие, либо равные a[i], влево от него, а все ключи, большие, либо 
+					 равные a[i] - вправо,
+					теперь массив состоит из двух подмножеств, причем левое меньше, 
+					либо равно правого,	для обоих подмассивов: если в подмассиве более двух элементов, 
+					рекурсивно запускаем для него ту же процедуру.
+						</script>
 				</section>
 
 				<section>
@@ -247,11 +362,70 @@
 					<h3>Сортировка пузырьком</h3>
 					<label for="sortInput1">Ваш массив:</label>
 					<input type="text" id="sortInput1">
-					<button id="startSort1">Сортировать</button><br>
+					<input type="button" value="Сортировать" id="_startSort1"><br/>
 					<output id="sortOutput1"></output>
 				</section>
 
+				<section>
+					<h2>Исходный код</h2>
+					<img name = 'img' src = 'ImageBubbleSort.png' />
+				</section>
 
+				<section>
+					<h2>Сортировка массивов</h2>
+					<h3>Сортировка перемешиванием</h3>
+					<label for="sortInput2">Ваш массив:</label>
+					<input type="text" id="sortInput2">
+					<input type="button" value="Сортировать" id="_startSort2"><br/>
+					<output id="sortOutput2"></output>
+				</section>
+
+				<section>
+					<h2>Исходный код</h2>
+					<img name = 'img' src = 'ImageShackerSort.png' />
+				</section>
+
+				<section>
+					<h2>Сортировка массивов</h2>
+					<h3>Сортировка вставками</h3>
+					<label for="sortInput3">Ваш массив:</label>
+					<input type="text" id="sortInput3">
+					<input type="button" value="Сортировать" id="_startSort3"><br/>
+					<output id="sortOutput3"></output>
+				</section>
+
+				<section>
+					<h2>Исходный код</h2>
+					<img name = 'img' src = 'ImageInsertSort.png' />
+				</section>
+
+				<section>
+					<h2>Сортировка массивов</h2>
+					<h3>Сортировка слиянием</h3>
+					<label for="sortInput4">Ваш массив:</label>
+					<input type="text" id="sortInput4">
+					<input type="button" value="Сортировать" id="_startSort4"><br/>
+					<output id="sortOutput4"></output>
+				</section>
+
+				<section>
+					<h2>Исходный код</h2>
+					<img name = 'img' src = 'ImageMergeSort2.png' />
+				</section>
+
+				<section>
+					<h2>Сортировка массивов</h2>
+					<h3>Сортировка быстрая</h3>
+					<label for="sortInput5">Ваш массив:</label>
+					<input type="text" id="sortInput5">
+					<input type="button" value="Сортировать" id="_startSort5"><br/>
+					<output id="sortOutput5"></output>
+				</section>
+
+				<section>
+					<h2>Исходный код</h2>
+					<img name = 'img' src = 'ImageQuickSort.png' />
+				</section>
 
 			</div>
 		</div>
@@ -263,28 +437,170 @@
 
 		<script>
 			window.onload = () => {
-				document.querySelector('#startSort1').onclick = () => {
+				//Таблицы
+				document.querySelector('#idTable').onclick = () =>{
+					let tableResult = document.querySelector('#idTable').value;
+					let table = document.querySelector('#tableResult');
+
+					switch(tableResult){
+						case '01':
+						
+							
+							
+							table.innerHTML = "<tr><td>0</td></tr><tr><td>0</td></tr><tr><td>0</td></tr><tr><td>1</td></tr>";
+							break;
+						case '02':
+							table.innerHTML = "<tr><td>0</td></tr><tr><td>1</td></tr><tr><td>1</td></tr><tr><td>1</td></tr>";
+							break;
+						case '04':
+							table.innerHTML = "<tr><td>1</td></tr><tr><td>1</td></tr><tr><td>0</td></tr><tr><td>1</td></tr>";
+							break;
+						case '05':
+							table.innerHTML = "<tr><td>1</td></tr><tr><td>0</td></tr><tr><td>0</td></tr><tr><td>1</td></tr>";
+							break;
+						case '06':
+							table.innerHTML = "<tr><td>0</td></tr><tr><td>1</td></tr><tr><td>1</td></tr><tr><td>0</td></tr>";
+							break;
+						case '08':
+							table.innerHTML = "<tr><td>1</td></tr><tr><td>0</td></tr><tr><td>0</td></tr><tr><td>0</td></tr>";
+							break;
+						case '09':
+							table.innerHTML = "<tr><td>1</td></tr><tr><td>1</td></tr><tr><td>1</td></tr><tr><td>0</td></tr>";
+							break;				
+						
+					}
+			
+				};
+
+
+				//СОРТИРОВКА ПУЗЫРЬКОМ
+				document.querySelector('#_startSort1').onclick = () => {
 					let arrayIn = document.querySelector('#sortInput1').value;
-					
-					if (array === '') { return document.querySelector('#sortOutput1').innerHTML = 'Вы ничего не ввели'; }
+					let resultDoc = document.querySelector('#sortOutput1')
 					
 					function bubbleSort(arr) {
-  						for (let j = arr.length - 1; j > 0; j--) {
-    						for (let i = 0; i < j; i++) {
-      							if (arr[i] > arr[i + 1]) {
-        							let temp = arr[i];
-        							arr[i] = arr[i + 1];
-        							arr[i + 1] = temp;
-      							}
-    						}
-  						}
-					}
-					let result = bubbleSort(array);
-					return document.querySelector('#sortOutput1').innerHTML = result;
-				}
-			}
-		
+   						 for(let j=0;j<arr.length;j++) {
+        					for(let i = 0; i < arr.length; i++) {
+            					if(arr[i]>arr[i+1]) {
+                			var temp = arr[i];
+                			arr[i] = arr[i+1];
+                			arr[i+1] = temp;
+            			}
+        			}
+    			}      
+    		return arr;
+		}
+	resultDoc.innerHTML = "["+bubbleSort(Array.from(arrayIn))+"]"
+    return  bubbleSort(arrayIn);
+};
 
+//СОРТИРОВКА ПЕРЕМЕШИВАНИЕМ
+document.querySelector('#_startSort2').onclick = () => {
+					let arrayIn = document.querySelector('#sortInput2').value;
+					let resultDoc = document.querySelector('#sortOutput2')
+
+function shakerSort(array) {
+    let left = 0;
+    let right = array.length - 1;
+    do {
+        for (let i = left; i < right; i++) {
+            if (array[i] > array[i + 1]) {
+                [array[i], array [i + 1]] = [array[i + 1], array [i]]
+            }
+        }
+        right--;
+        for (let i = right; left < i; i--) {
+            if (array[i] < array[i - 1]) {
+                [array[i], array [i - 1]] = [array[i - 1], array [i]]
+            }
+        }
+        left++;
+    } while (left < right);
+return array;
+}
+resultDoc.innerHTML = "["+shakerSort(Array.from(arrayIn))+"]"
+    return shakerSort(arrayIn);
+
+};
+
+//СОРТИРОВКА ВСТАВКАМИ
+document.querySelector('#_startSort3').onclick = () => {
+					let arrayIn = document.querySelector('#sortInput3').value;
+					let resultDoc = document.querySelector('#sortOutput3')
+
+function insertSort(arr){
+    for (let i = 1, l = arr.length; i < l; i++) {
+        const current = arr[i];
+        let j = i;
+        while (j > 0 && arr[j - 1] > current) {
+            arr[j] = arr[j - 1];
+            j--;
+        }
+        arr[j] = current;
+    }
+    return arr;
+};
+					
+resultDoc.innerHTML = "["+insertSort(Array.from(arrayIn))+"]"
+    return insertSort(arrayIn);
+};
+
+//СОРТИРОВКА СЛИЯНИЕМ
+document.querySelector('#_startSort4').onclick = () => {
+					let arrayIn = document.querySelector('#sortInput4').value;
+					let resultDoc = document.querySelector('#sortOutput4')
+
+function Merge(a,low,mid,high)    //Вспомогательная функция.
+{
+    var b = new Array(high+1-low), h, i, j = mid+1, k, h = low, i = 0;
+    while (h <= mid && j <= high )
+     { if (a[h] <= a[j]){ b[ i ]=a[h]; h++; }
+       else             { b[ i ]=a[j]; j++; }
+       i++;
+     }
+    if (h > mid){ for (k = j; k <= high; k++){ b[ i ]=a[k]; i++; } }
+    else        { for (k = h; k <= mid; k++){  b[ i ]=a[k]; i++; } }    
+    for (k=0; k<=high-low; k++) a[k+low]=b[k];
+    return a;
+}
+
+function mergeSort(A)      //Функция сортировки слиянияем.
+{
+    function merge_sort(a,low,high)
+     { if (low < high)
+        { var mid = Math.floor((low+high)/2);
+          merge_sort(a, low, mid);
+          merge_sort(a, mid+1, high);
+          Merge(a, low, mid, high);
+        }
+     }
+    var n = A.length;
+    merge_sort(A, 0, n-1);
+    return A;
+}
+resultDoc.innerHTML = "["+mergeSort(Array.from(arrayIn))+"]"
+    return mergeSort(arrayIn);
+};
+
+//СОРТИРОВКА Быстрая
+document.querySelector('#_startSort5').onclick = () => {
+					let arrayIn = document.querySelector('#sortInput5').value;
+					let resultDoc = document.querySelector('#sortOutput5')
+
+function quickSort(A)
+{
+    if (A.length == 0) return [];
+    var a = [], b = [], p = A[0];
+    for (var i = 1; i < A.length; i++)
+     { if (A[ i ] < p) a[a.length] = A[ i ];
+       else b[b.length] = A[ i ];
+     }
+    return quickSort(a).concat( p,quickSort(b) );
+}
+resultDoc.innerHTML = "["+quickSort(Array.from(arrayIn))+"]"
+	return quickSort(arrayIn);
+};
+			}
 		</script>
 
 		<script>
