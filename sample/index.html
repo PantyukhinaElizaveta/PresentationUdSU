@@ -24,6 +24,17 @@
 					</script>
 				</section>
 
+				<section data-markdown data-markdown-separator="^Notes:">
+					<script type="text/template">
+						Меню
+						----------------------
+						1. Логические операции
+						2. Таблица истинности
+						3. Алгоритмы сортировок
+						4. Сортировка массивов				
+					</script>
+				</section>
+
 				
 				<section data-markdown data-markdown-separator="^Notes:">
 					<script type="text/template">
@@ -490,7 +501,8 @@
     			}      
     		return arr;
 		}
-	resultDoc.innerHTML = "["+bubbleSort(Array.from(arrayIn))+"]"
+		resultDoc.innerHTML = "["+bubbleSort(arrayIn.split(',').map(parseFloat))+"]"
+
     return  bubbleSort(arrayIn);
 };
 
@@ -518,7 +530,7 @@ function shakerSort(array) {
     } while (left < right);
 return array;
 }
-resultDoc.innerHTML = "["+shakerSort(Array.from(arrayIn))+"]"
+resultDoc.innerHTML = "["+shakerSort(arrayIn.split(',').map(parseFloat))+"]"
     return shakerSort(arrayIn);
 
 };
@@ -541,7 +553,7 @@ function insertSort(arr){
     return arr;
 };
 					
-resultDoc.innerHTML = "["+insertSort(Array.from(arrayIn))+"]"
+resultDoc.innerHTML = "["+insertSort(arrayIn.split(',').map(parseFloat))+"]"
     return insertSort(arrayIn);
 };
 
@@ -578,7 +590,7 @@ function mergeSort(A)      //Функция сортировки слияния�
     merge_sort(A, 0, n-1);
     return A;
 }
-resultDoc.innerHTML = "["+mergeSort(Array.from(arrayIn))+"]"
+resultDoc.innerHTML = "["+mergeSort(arrayIn.split(',').map(parseFloat))+"]"
     return mergeSort(arrayIn);
 };
 
@@ -597,7 +609,7 @@ function quickSort(A)
      }
     return quickSort(a).concat( p,quickSort(b) );
 }
-resultDoc.innerHTML = "["+quickSort(Array.from(arrayIn))+"]"
+resultDoc.innerHTML = "["+quickSort(arrayIn.split(',').map(parseFloat))+"]"
 	return quickSort(arrayIn);
 };
 			}
