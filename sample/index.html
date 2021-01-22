@@ -220,6 +220,7 @@
 				<section>
 					<h2>Таблицы истинности</h2>
 					<select name="table" id="idTable">
+						<option style="display: none;"> Выберете логическую операцию</option>
 						<option value="01">Конъюнкция</option>
 						<option value="02">Дизъюнкция</option>
 						<!-- <option value="03">Инверсия</option> -->
@@ -459,9 +460,6 @@
 
 					switch(tableResult){
 						case '01':
-						
-							
-							
 							table.innerHTML = "<tr><td>0</td></tr><tr><td>0</td></tr><tr><td>0</td></tr><tr><td>1</td></tr>";
 							break;
 						case '02':
@@ -481,7 +479,10 @@
 							break;
 						case '09':
 							table.innerHTML = "<tr><td>1</td></tr><tr><td>1</td></tr><tr><td>1</td></tr><tr><td>0</td></tr>";
-							break;				
+							break;		
+						default:
+							table.innerHTML = "";
+							break;		
 						
 					}
 			
